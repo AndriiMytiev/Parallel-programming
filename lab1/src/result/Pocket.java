@@ -28,7 +28,7 @@ public class Pocket {
 
     @Override
     public String toString() {
-        return "result.Pocket{" +
+        return "Pocket{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';
