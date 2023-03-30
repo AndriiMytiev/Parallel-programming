@@ -14,7 +14,7 @@ public class BounceFrame extends JFrame {
 
     public BounceFrame() {
         this.setSize(WIDTH, HEIGHT);
-        this.setTitle("result.Bounce programm");
+        this.setTitle("Bounce program");
         this.canvas = new BallCanvas();
         System.out.println("In Frame Thread name = "
                 + Thread.currentThread().getName());
@@ -24,10 +24,10 @@ public class BounceFrame extends JFrame {
 
         JPanel buttonPanel = new JPanel();
         buttonPanel.setBackground(Color.lightGray);
-        JButton buttonStart = new JButton("Blue result.Ball");
+        JButton buttonStart = new JButton("Blue Ball");
         JButton buttonStop = new JButton("Stop");
-        JButton buttonRedBall = new JButton("Red result.Ball");
-        JButton buttonRace = new JButton("Red Blue result.Ball race");
+        JButton buttonRedBall = new JButton("Red Ball");
+        JButton buttonRace = new JButton("Red Blue Ball race");
         JButton buttonJoin = new JButton("Join Button");
         label = new JLabel("0 balls");
         canvas.label = label;
@@ -50,7 +50,7 @@ public class BounceFrame extends JFrame {
                 canvas.add(red);
                 BallThread thread = new BallThread(red, 8);
                 thread.start();
-                System.out.println("Thread name Red result.Ball = " +
+                System.out.println("Thread name Red Ball = " +
                         thread.getName());
             }
         });
@@ -88,7 +88,7 @@ public class BounceFrame extends JFrame {
                 canvas.add(orange);
                 BallThread thread = new BallThread(orange, 10);
                 thread.start();
-                System.out.println("Thread name Blocking result.Ball = " +
+                System.out.println("Thread name Blocking Ball = " +
                         thread.getName());
                 Thread a = new Thread(() -> {
                     try {
